@@ -15,8 +15,15 @@ export interface KeyboardProps {
   onBackspace: () => void;
 }
 
-// Turkish QWERTY layout
+// Turkish QWERTY layout with Turkish characters
 const KEYBOARD_ROWS = [
+  ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
+  ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
+  ['ENTER', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'BACKSPACE'],
+];
+
+// Extended Turkish layout with Turkish characters in their standard positions
+const TURKISH_KEYBOARD_ROWS = [
   ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'Ğ', 'Ü'],
   ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Ş', 'İ'],
   ['ENTER', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'Ö', 'Ç', 'BACKSPACE'],
@@ -63,7 +70,7 @@ export const Keyboard: React.FC<KeyboardProps> = ({
 
   return (
     <div data-testid="keyboard" className="flex flex-col gap-1.5 sm:gap-2 p-2">
-      {KEYBOARD_ROWS.map((row, rowIndex) => (
+      {TURKISH_KEYBOARD_ROWS.map((row, rowIndex) => (
         <div
           key={rowIndex}
           data-testid={`keyboard-row-${rowIndex}`}
