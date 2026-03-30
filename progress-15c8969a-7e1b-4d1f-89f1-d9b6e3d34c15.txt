@@ -1,0 +1,37 @@
+=== US-006: Projects Page & Project Card Component ===
+COMPLETED: 2026-03-26T06:51:00Z
+FILES CHANGED:
+- app/projects/page.tsx - Projects page with category filter bar and search
+- app/components/ProjectCard.tsx - Project card component with hover effects
+- app/components/ProjectSkeleton.tsx - Loading skeleton for 6 cards
+- app/components/EmptyState.tsx - Empty state component
+- app/components/ProjectCard.test.tsx - Component tests
+- app/projects/page.test.tsx - Page integration tests
+- lib/types.ts - TypeScript type definitions
+- lib/data.ts - Mock project data
+- lib/api-response.ts - API response utilities
+- app/api/projects/route.ts - Projects API endpoint
+- vitest.config.ts - Vitest configuration
+- vitest.setup.ts - Test setup file
+
+KEY DECISIONS:
+- Used React hooks (useState, useEffect, useCallback) for state management
+- Implemented debounced search (300ms) to reduce API calls
+- Category filter bar is sticky with backdrop-blur for modern UI
+- Project cards have hover effect: border-primary, translateY(-4px), shadow-lg
+- Responsive grid: 1 column mobile, 2 columns tablet, 3 columns desktop
+- Loading skeleton shows 6 cards during data fetch
+- Empty state shows contextual message based on active filters
+- All buttons have functional onClick handlers
+- All links route to correct pages
+- 32 tests passing (100% test coverage for components)
+
+DEPENDENCIES ADDED:
+- vitest (testing framework)
+- @vitejs/plugin-react (React plugin for Vite)
+- @testing-library/react (React testing utilities)
+- @testing-library/jest-dom (DOM matchers)
+- @testing-library/dom (DOM testing utilities)
+- jsdom (browser environment for tests)
+
+PR_URL: https://github.com/hikmetgulsesli/dev-hike1/pull/7
