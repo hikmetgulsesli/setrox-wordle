@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Keyboard, GuessResult } from './components';
+import { Keyboard, Clock } from './components';
+import type { GuessResult } from './components';
 import './App.css';
 
 function App() {
@@ -30,7 +31,10 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
-      <h1 className="text-3xl font-bold mb-8">Wordle Game</h1>
+      <h1 className="text-3xl font-bold mb-4">Wordle Game</h1>
+      
+      {/* Digital Clock and Date Display */}
+      <Clock className="mb-6" />
       
       {/* Current guess display */}
       <div className="mb-8 text-2xl font-mono tracking-widest">

@@ -1,2 +1,0 @@
-STATUS: done
-SUMMARY: Günlük standup raporu gönderildi. 3 cancelled feature-dev run, 8 failed/10 done story, 13 aktif agent. Sistem: RAM 8.2Gi/18Gi, Disk %62, Uptime 9g 15s. Maliyet: USD 0 bugün, USD 0.98 all-time. 91 failed/59 timeout/7 abandoned alert. Discord Message ID: 1486254539895078963, Telegram Message ID: 6969

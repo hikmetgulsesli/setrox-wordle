@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
-import { Key, KeyStatus } from './Key';
+import { Key } from './Key';
+import type { KeyStatus } from './Key';
 
 export type LetterStatus = 'correct' | 'present' | 'absent' | 'empty';
 
